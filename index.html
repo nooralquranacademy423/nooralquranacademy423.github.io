@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ps" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>نور القرآن اسلامي اکاډمي</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">📖 <span id="academyName">نور القرآن اسلامي اکاډمي</span></div>
+  <nav>
+    <a href="#home">کور</a><a href="#courses">کورسونه</a><a href="#about">زموږ په اړه</a>
+    <a href="#register">ثبت‌نام</a><a href="#contact">اړیکه</a>
+    <a class="login" href="admin.html">🔐 اداره</a>
+  </nav>
+</header>
+<main>
+<section id="home" class="hero">
+  <div>
+    <span class="badge">آنلاین اسلامي زده کړې</span>
+    <h1 id="heroTitle">نور القرآن اسلامي اکاډمي</h1>
+    <p id="heroText">د قرآن کریم د ترجمه او تفسیر آنلاین زده‌کړې، په پښتو او دري ژبو.</p>
+    <a class="btn" href="#register">اوس ثبت‌نام وکړئ</a>
+  </div>
+</section>
+<section id="courses">
+<h2>زموږ کورسونه</h2><div id="courseList" class="cards"></div>
+</section>
+<section id="about" class="about">
+<h2>زموږ په اړه</h2><p id="aboutText">نور القرآن اسلامي اکاډمي د قرآن کریم د ترجمه او تفسیر لپاره یوه ساده آنلاین زده‌کړیزه اداره ده. درسونه Live او Recorded وړاندې کېږي.</p>
+</section>
+<section id="register">
+<h2>د زده‌کوونکي ثبت‌نام</h2>
+<form id="registrationForm" class="form">
+<input name="name" required placeholder="بشپړ نوم">
+<input name="father" placeholder="د پلار نوم">
+<input name="phone" required placeholder="WhatsApp / موبایل شمېره">
+<input name="age" type="number" min="5" max="100" placeholder="عمر">
+<select name="gender"><option value="">جنس</option><option>نارینه</option><option>ښځینه</option></select>
+<select name="language"><option>پښتو</option><option>دري</option></select>
+<select name="course" id="courseSelect" required></select>
+<input name="time" placeholder="د درس مناسب وخت">
+<button class="btn" type="submit">ثبت‌نام</button>
+<p id="formMessage" class="message"></p>
+</form>
+</section>
+<section id="contact">
+<h2>اړیکه</h2><p id="contactText">WhatsApp: خپل نمبر د Admin Dashboard له لارې اضافه کړئ.</p>
+</section>
+</main>
+<footer>© <span id="year"></span> نور القرآن اسلامي اکاډمي</footer>
+<script src="app.js"></script>
+</body></html>

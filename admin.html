@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ps" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin Dashboard - نور القرآن</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="brand">⚙️ د اډمین Dashboard</div><nav><a href="index.html">Website</a></nav></header>
+<main class="dashboard">
+<section id="loginBox" class="form">
+<h2>Admin Login</h2><p>د Demo لپاره پاسورډ: <b>12345</b></p>
+<input id="adminPass" type="password" placeholder="پاسورډ"><button class="btn" onclick="login()">ننوتل</button><p id="loginMsg"></p>
+</section>
+<section id="panel" style="display:none">
+<div class="tabs">
+<button onclick="showTab('settings')">د اکاډمۍ معلومات</button>
+<button onclick="showTab('coursesTab')">کورسونه</button>
+<button onclick="showTab('students')">زده‌کوونکي</button>
+</div>
+<div id="settings" class="tab">
+<h2>د اکاډمۍ معلومات</h2>
+<div class="form">
+<input id="sName" placeholder="د اکاډمۍ نوم">
+<textarea id="sHero" placeholder="د Home متن"></textarea>
+<textarea id="sAbout" placeholder="د اکاډمۍ په اړه"></textarea>
+<input id="sContact" placeholder="WhatsApp / اړیکه">
+<button class="btn" onclick="saveSettings()">ذخیره</button><p id="saveMsg"></p>
+</div></div>
+<div id="coursesTab" class="tab" style="display:none">
+<h2>کورسونه</h2>
+<div class="form">
+<input id="cTitle" placeholder="د کورس نوم">
+<input id="cDesc" placeholder="لنډه تشریح">
+<input id="cFee" placeholder="میاشتنی فیس، مثال: 500 AFN">
+<input id="cLive" placeholder="Live Class لینک (اختیاري)">
+<input id="cVideo" placeholder="Recorded درس لینک (اختیاري)">
+<button class="btn" onclick="addCourse()">کورس اضافه کړئ</button>
+</div><div id="adminCourses" class="cards"></div>
+</div>
+<div id="students" class="tab" style="display:none">
+<h2>ثبت شوي زده‌کوونکي</h2><button class="btn" onclick="exportStudents()">CSV ډاونلوډ</button>
+<div id="studentTable" class="tableWrap"></div>
+</div>
+</section></main>
+<script src="admin.js"></script></body></html>
